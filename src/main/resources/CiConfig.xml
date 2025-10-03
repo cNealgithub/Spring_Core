@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+<!--    //this is constructor injection-->
+    <bean class="com.springcore.Ci.Certificate" name="certi">
+        <constructor-arg value="Java full-stack with spring"/>
+    </bean>
+
+    <bean class="com.springcore.Ci.Person" name="PersonCi">
+        <constructor-arg value="Neal"/>
+        <constructor-arg value="122" type="int"/>
+        <constructor-arg ref="certi"/>
+        <constructor-arg>
+            <list>
+                <value>SmartWatch</value>
+                <value>Smart Ring</value>
+                <value>Wireless earbuds</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean class="com.springcore.Ci.Animal" name="animal">
+        <constructor-arg value="1"/>
+        <constructor-arg value="Lion" />
+        <constructor-arg value="Land" />
+        <constructor-arg value="Cat"/>
+    </bean>
+
+    <bean class="com.springcore.Ci.Animal" name="animals">
+        <constructor-arg value="2" type="int"/>
+        <constructor-arg value="wild dog"/>
+        <constructor-arg value="land/jungle"/>
+    </bean>
+</beans>
