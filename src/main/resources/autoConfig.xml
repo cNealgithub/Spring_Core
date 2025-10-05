@@ -6,12 +6,15 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context.xsd">
-
-<!--     <bean class="com.springcore.Lifecycle.viaXML.Samosa" name="samosa" init-method="init" destroy-method="destroy">-->
-<!--         <property name="price" value="8"/>-->
-<!--         <property name="shop" value="sonali sweets"/>-->
-<!--     </bean>-->
-    <bean name="p1" class="com.springcore.Lifecycle.viaInterface.Pepsi">
-        <property name="price" value="19.5"/>
+    <bean name="book1" class="com.springcore.AutoWire.ViaXml.Book1">
+        <property name="bookId" value="110" />
+        <property name="bookName" value="Harry Potter"/>
+        <property name="price" value="1499"/>
     </bean>
+    <bean name="book2" class="com.springcore.AutoWire.ViaXml.Book2">
+        <property name="bookId" value="114" />
+        <property name="bookName" value="Harry Potter"/>
+        <property name="price" value="2899"/>
+    </bean>
+    <bean name="library" class="com.springcore.AutoWire.ViaXml.Library" autowire="byName"/>
 </beans>
