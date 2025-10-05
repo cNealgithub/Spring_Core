@@ -6,6 +6,7 @@
                            http://www.springframework.org/schema/beans/spring-beans.xsd
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config/>
     <bean name="book1" class="com.springcore.AutoWire.ViaXml.Book1">
         <property name="bookId" value="110" />
         <property name="bookName" value="Harry Potter"/>
@@ -17,4 +18,12 @@
         <property name="price" value="2899"/>
     </bean>
     <bean name="library" class="com.springcore.AutoWire.ViaXml.Library" autowire="byName"/>
+    <bean name="bluetooth" class="com.springcore.AutoWire.ViaAnnotation.Bluetooth">
+        <property name="series" value="Latest"/>
+        <property name="version" value="5.1"/>
+    </bean>
+    <bean name="bluetoothspeaker" class="com.springcore.AutoWire.ViaAnnotation.BluetoothSpeaker">
+        <property name="DevceName" value="Philips BT-64"/>
+        <property name="RmsValue" value="10"/>
+    </bean>
 </beans>
