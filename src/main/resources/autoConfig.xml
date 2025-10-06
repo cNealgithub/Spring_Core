@@ -22,6 +22,10 @@
         <property name="series" value="Latest"/>
         <property name="version" value="5.1"/>
     </bean>
+    <bean name="bluetooth2" class="com.springcore.AutoWire.ViaAnnotation.Bluetooth">
+        <property name="series" value="Latest"/>
+        <property name="version" value="5.3"/>
+    </bean>
     <bean name="bluetoothspeaker" class="com.springcore.AutoWire.ViaAnnotation.BluetoothSpeaker">
         <property name="DevceName" value="Philips BT-64"/>
         <property name="RmsValue" value="10"/>

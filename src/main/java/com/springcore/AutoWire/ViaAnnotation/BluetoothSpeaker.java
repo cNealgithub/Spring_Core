@@ -1,12 +1,14 @@
 package com.springcore.AutoWire.ViaAnnotation;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 public class BluetoothSpeaker {
     private String DevceName;
     private int RmsValue;
 
     @Autowired
+    @Qualifier("bluetooth2")
     private Bluetooth bluetooth;
 
     public String getDevceName() {
