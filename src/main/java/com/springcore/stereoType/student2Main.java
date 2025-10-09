@@ -13,5 +13,6 @@ public class student2Main {
         System.out.println(s1);
         List<String> ad = s1.getAddresses();
         System.out.println(ad);
+        System.out.println("type of address" + s1.getAddresses().getClass().getName());
     }
 }
