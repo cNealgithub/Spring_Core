@@ -14,5 +14,8 @@ public class student2Main {
         List<String> ad = s1.getAddresses();
         System.out.println(ad);
         System.out.println("type of address" + s1.getAddresses().getClass().getName());
+        System.out.println(s1.hashCode());
+        Student2 s2 = con.getBean("student2", Student2.class);
+        System.out.println(s2.hashCode());
     }
 }
