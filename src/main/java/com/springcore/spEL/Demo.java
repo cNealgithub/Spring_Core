@@ -9,6 +9,14 @@ public class Demo {
     private int x;
     @Value("#{88+54}")
     private int y;
+    @Value("#{T(java.lang.Math).sqrt(144)}")
+    private double z;
+    @Value("#{T(java.lang.Math).PI}")
+    private double pi;
+    @Value("#{new java.lang.String('Neal Chakravarty')}")
+    private String name;
+    @Value("#{7>5}")
+    private boolean isActive;
 
     public int getX() {
         return x;
@@ -26,11 +34,39 @@ public class Demo {
         this.y = y;
     }
 
+    public double getZ() {
+        return z;
+    }
+
+    public void setZ(double z) {
+        this.z = z;
+    }
+
+    public double getPi() {
+        return pi;
+    }
+
+    public void setPi(double pi) {
+        this.pi = pi;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString() {
         return "Demo{" +
                 "x=" + x +
                 ", y=" + y +
+                ", z=" + z +
+                ", pi=" + pi +
+                ", name='" + name + '\'' +
+                ", isActive=" + isActive +
                 '}';
     }
 }
